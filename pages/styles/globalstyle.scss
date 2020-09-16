@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Mono:ital@1&display=swap');
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+html{
+    
+    box-sizing: border-box;
+   
+    scroll-behavior: smooth;
+  }
+
+
+  html,body{
+      height: 100%;
+  }
+body{
+    line-height: 26px;
+    font-size: 1rem;
+font-family: 'Space Mono', monospace;
+    font-weight: normal;
+    
+   
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#__next {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/***home page ***/
+
+.homepage{
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5dc;
+
+    .hero{
+           height: 80%;
+           padding-bottom: 4rem;
+           img{
+            width: 70%;
+            object-fit: contain;
+            height: 80%;
+       
+           }
+
+    }
+
+    .hero-image-div{
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-title{
+
+        text-align: center;
+       
+        h1{
+            font-weight: 600;
+           
+            word-spacing: 100vw;
+        }
+
+        h1::first-letter{
+          text-transform: uppercase;  
+          font-weight: 900;
+          font-size: 4rem;
+        }
+
+        .link{
+            font-family: 'Montserrat',monospace;
+            font-weight: bold;
+            margin-top: 2rem;
+            background-color: red;
+            text-decoration: none;
+            color: #ffffff;
+            border-style: solid;
+            border-color: #000000;
+            padding: .5rem;
+            border-radius: 7% 7%;
+            display: inline-block;
+        }
+    }
+
+    .interets-section{
+        background-color: #fdf5ee;
+        padding-top: 2rem;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 4.5rem;
+
+        .interets-div{
+            width: 100%;
+            margin: 0;
+            .interets {
+                position: relative;
+                text-align: center;
+                padding:1rem;
+                height: 350px;
+                .text-div{
+                    position: absolute; /* Position the background text */
+                    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+                    background: rgb(0, 0, 0); /* Fallback color */
+                    background: rgba(0, 0, 0, 0.95); /* Black background with 0.5 opacity */
+                    color: #f1f1f1; /* Grey text */
+                    width: 75%; /* Full width */
+                    padding: 20px; /* Some padding */
+                    height: 30%;
+                    font-size: 1.5rem;
+                    transition: height 1.5s;
+                }
+
+                .text-div:hover{
+                    height:  90%;
+                    cursor: pointer;
+                   
+                }
+                
+                .culture{
+                    
+                }
+            }
+        }
+    }
+}
+
+ .section-title{
+     padding: 1rem;
+     
+      h4{
+        text-align: center;
+          font-size: 1.5rem;
+          font-weight: 900;
+
+          margin-bottom: 2rem;
+      }
+      h4::first-letter{
+          text-transform: uppercase;
+          
+      }
+
+      p{
+          text-align: left;
+          font-family: monospace;
+          font-size: 1.5rem;
+          
+      }
+ }
+
+ .caroussel-div{
+     width: 100%;
+     padding:1.5rem;
+
+
+     
+ }
+
+ .directions{
+    width: 100%;
+   
+
+    button{
+        position: relative;
+    }
+    button:nth-child(1){
+        left: 1%;
+    }
+    button:nth-child(2){
+        left: 90%;
+    }
+}
+
+
+ .business-section{
+    background-color: #051412;
+     background-size: 100%;
+     padding-top: 3rem;
+     height: 100%;
+     width: 100%;
+     padding-bottom: 4.5rem;
+     color: #ffffff;
+
+     .business-div{
+         padding: 1rem;
+
+     }
+
+     .business-description{
+         font-family: 'Montserrat',monospace;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .business-div .business-image img{
+         width: 100%;
+         height: 80%;
+         object-fit: contain;
+     }
+
+     button{
+         padding: .7rem;
+         border-style: solid;
+         border-radius: 7% 7% ;
+         border-color: #000000;
+         font-weight: 900;
+         background-color: #ff0000;
+         color: #ffffff;
+         font-size: 1rem;
+         
+     }
+ }
+
+
+ .covid-section{
+    padding-top: 2rem;
+     height: 500px; 
+        background-image: url("/svg/corona.svg");
+        background-size: contain;
+        background-size: 40%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        width: 100%;
+        
+     .covid-div{
+         width: 100%;
+        padding:1rem;
+        text-align: center;
+        
+     }
+
+     button{
+        padding: .4rem;
+        border-style: solid;
+        border-radius: 7% 7% ;
+        border-color: #000000;
+        font-weight: 900;
+        background-color: #ff0000;
+        color: #ffffff;
+        font-size: .7rem;
+        width: 25%;
+     }
+ }
+
+
+ .gastronomie,
+ .hotels{
+     width: 100%;
+     height: 100%;
+
+     .hero{
+         height: 75vh;
+        background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url("/images/gastro-medium.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .presentation{
+        text-align: center;
+        padding: 1.5rem;
+
+        h2{
+            font-weight: 900;
+            font-size: 2.5rem;
+            letter-spacing: .15rem;
+            text-transform: capitalize;
+            margin-bottom: 2rem;
+        }
+        h5{
+            font-family: 'Montserrat',monospace;
+            font-weight: 150;
+        }
+    }
+
+    
+    
+ }
+
+
+ 
+
+
+ .info-style{
+    height:40%;
+    width:100%;
+    padding:.5rem;
+
+
+      
+
+        span{
+            font-size: .8rem;
+            display: block;
+        }
+
+        span:first-child{
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        button{
+            padding:.3rem;
+            background-color: #f7c02c;
+            border-radius: 10% 10%;
+        }
+ }
+
+
+ .search-div{
+    padding: 2.5rem;
+    text-align: center;
+    font-family: monospace,sans-serif;
+
+}
+
+.search-button-div{
+    width: 100%;
+    text-align: center;
+    font-family: monospace,sans-serif;
+}
+
+.search-button{
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #ff0000 ;
+    border-color: #ff0000;
+    border-radius:10px ;
+    width: 40%;
+}
+
+.custom-select{
+    background: #fff url("/svg/search.svg") no-repeat right .75rem center/20px 20px;
+    border-radius: 25px;
+    border-color: #000000;
+    border-width: .08rem;
+    margin-bottom: 2rem;
+
+}
+
+
+.restaurants-div,
+.cuisine-local-div,
+.all-hotels-div{
+    padding: 2rem;
+
+    h4{
+        padding: 0 0 1.5rem 0;
+        font-weight: 900;
+    }
+}
+.restaurants-div,
+.all-hotels-div{
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+}
+
+.cuisine-local-div{
+
+}
+.avis-div{
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 500px;
+    background-image: url("/images/foodavis-large.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;;
+}
+
+
+.avis-text{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left:50%;
+    padding: 3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.avis-text h3{
+font-style: oblique;
+font-weight: 900;
+}
+ 
+
+.recommandation-div{
+    background-color: #eff3f3;
+    font-family: monospace,sans-serif;
+    padding: 4rem 2rem 0 2rem;
+    
+
+        h2{
+            font-weight: bold;
+            font-variant: small-caps;
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
+}
+
+
+.avis{
+    background-color: #fff;
+    width: 80%;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+border-radius: 5px;
+padding:3rem;
+
+margin-bottom: 1rem;
+}
+
+
+.avis-resto-div{
+
+    padding-bottom: 1.5rem;
+
+    h5{
+        font-weight: 900;
+        font-size: 1.4rem;
+    }
+
+    span{
+        color: #808080;
+    }
+}
+
+
+.avis-client-profile{
+
+    display: flex;
+    
+
+    span{
+        margin-left: 1.5rem;
+        font-size: 1.3rem;
+
+    }
+}
+
+.avis-note{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.avis-note-moyenne-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avis-note-moyenne{
+    text-align: center;
+    border-radius: 50%;
+    border-color: #008000;
+    color: #008000;
+    border-style: solid;
+    border-width: 2px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.comment-div{
+    padding-top: 2rem;
+    h5{
+        font-weight: 500;
+    }
+}
+
+
+
+.page{
+
+}
+
+.side-presentation{
+    position: fixed;
+    height: 100%;
+    width:20% ;
+    z-index: -1;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    overflow-x: hidden;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 7vh;
+}
+
+
+.data-thumbnail{
+height: 200px;
+}
+
+.data-thumbnail img{
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 1px 1px 1px rgba(0,0,0,3);
+}
+
+.data-name{
+    font-weight: bold;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.side-menu{
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: 500;
+    font-family: monospace,sans-serif;
+}
+
+.side-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.side-menu ul li{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #808080;
+
+    
+}
+
+
+.data-main{
+   
+    height: 100%;
+    
+    background-color: #e9e8e8 ;
+    
+    font-family: monospace,sans-serif;
+}
+
+.data-infos,
+.data-photos,
+.data-avis,
+.data-menu {
+    background-color: #ffffff;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    padding:2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.data-infos ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    li{
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-width: thin;
+        border-color: rgba(156, 155, 155, 0.2);
+        padding: .5rem;
+    }
+}
+
+
+.data-social , 
+.data-services{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.data-services span{
+background-color: rgb(238, 157, 98);
+border-style: solid;
+padding:.3rem;
+border-radius: 25px;
+margin-right: 1rem;
+}
+
+.data-title{
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    text-align: left;
+    
+}
+.data-menu{
+    padding: 1rem;
+
+}
+.data-menu ul{
+    list-style-type: none;
+}
+
+.data-menu p:first-child{
+  border-bottom-style: solid;
+  border-bottom-width: 7px;
+  border-color: red;
+  font-weight: 900;
+  
+}
+
+
+.data-menu span{
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.hotels .hero{
+    padding-top: 3.5rem;
+    text-align: center;
+    background-image: url('/images/hotel-medium.jpg');
+}
+
+.hotels .search-div{
+  
+    
+}
+
+.sketchy {
+    padding: 2rem 4rem;
+    display: inline-block;
+    border: 4px solid #333333;
+    font-size: .7rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+    position: relative;
+    
+    &::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+}
+
+
+
+
+
+.tourisme-hero{
+width: 100%;
+height: 75vh;
+}
+
+.tourisme-video {
+  
+object-fit: cover;
+width: 100%;
+height: 100%;
+  }
+  
+.tourisme-video-content {
+    position: relative;
+    top: -70%;
+    background: rgba(247, 151, 7, 0.89);
+    color: #000000;
+    width: 75%; 
+    height: 40vh;
+    padding: .5rem;
+    margin-left: 1.5rem; 
+  }
+
+
+  .tourisme-video-content h1{
+      font-weight: 900;
+      font-family: monospace,sans-serif;
+  }
+
+
+.tourisme-video-content span{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tourisme-choix{
+    height: 600px;
+}
+
+.barniere{
+    width:20%;
+    position: relative;
+    left:70%;
+    
+    top:-25%;
+    background-color: red;
+    height: 100%;
+
+}
+  
+
+.big-text{
+   
+    width: 100%;
+    top: -60%;
+    //z-index: 1500;
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.big-text h2{
+    font-family: monospace,sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+
+
+.datas{
+    padding: 2rem;
+    background-color: rgba(238, 144, 4, 0.1);
+}
+.masonry {
+    columns: 4;
+    column-gap: 16px;
+
+     
+    @media (max-width: 1200px) {
+      columns: 3;
+    }
+    @media (max-width: 992px) {
+      columns: 2;
+    }
+    //@media (max-width: 768px) {columns: 1;}
+    .grid {
+      display: inline-block;
+      height: 300px;
+      margin-bottom: 16px;
+      position: relative;
+      &:before {
+        border-radius: 5px;
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-color:rgba(0,0,0,.7);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      &__title {
+        font-size: 1.5rem;
+        font-weight:bold;
+        margin: 0px 0px 5px 0px;
+      }
+      &__author {
+        font-size: 1rem;
+        font-weight:300;
+      }
+      &__link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      &__body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 1rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column
+      }
+      &__tag {
+        background-color:rgba(255,255,255,.8);
+        color: #333;
+        border-radius:5px;
+        padding: 5px 15px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .mt-auto {
+    margin-top:auto;
+  }
+  
+
+  .footer-section{
+      padding: 2rem;
+      padding-top: 3rem;
+      color: #ffffff;
+      background-color: #000000;
+      font-family: monospace,sans-serif;
+      
+      
+  }
+  
+  .footer-section a{
+      
+      display: block;
+      
+      
+  }
+
+  .footer-section h5{
+      font-weight: 900;
+      color: #e2b59a;
+  }
+
+  .social-footer{
+      padding-top: 1rem;
+  }
+  .social-footer a{
+      color: #e2b59a;
+  }
+  
+
+  .copyright-div{
+    display:block;
+    width:100%;
+    text-align:center;
+    border-top-style:solid;
+    border-width:1px;
+    background-color: #000000;
+}
+
+
+.button-style{
+    font-family: "Montserrat", monospace;
+    font-weight: bold;
+    margin-top: 2rem;
+    background-color: #000000;
+    text-decoration: none;
+    color: #ffffff;
+    border-style: solid;
+    border-color: #000000;
+    padding: 0.5rem;
+    border-radius: 7% 7%;
+    display: block;
+}
+
